@@ -7,7 +7,7 @@ const MapTools = () => {
     <div>
       <Zoom />
       <LayersControl />
-      {/* 这里可以继续添加其他自定义控件 */}
+      {/* 继续添加其他自定义控件 */}
     </div>
   );
 };
