@@ -2,9 +2,9 @@
 
 import dynamic from "next/dynamic";
 import Sidebar from "./Sidebar/Sidebar";
-import ChatListPanel from "./Chat/ChatListPanel";
+// import ChatListPanel from "./Chat/ChatListPanel";
 import UserPanel from "./UserPanel/UserPanel";
-import ChatWindow from "./Chat/ChatWindow";
+// import ChatWindow from "./Chat/ChatWindow";
 // import FooterBar from "./Footer/FooterBar";
 // import MapTools from "./Map/MapTools";
 

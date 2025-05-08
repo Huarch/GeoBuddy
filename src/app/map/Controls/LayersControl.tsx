@@ -5,7 +5,6 @@ import ReactDOM from "react-dom/client";
 import Control from "ol/control/Control";
 import TileLayer from "ol/layer/Tile.js";
 import XYZ from "ol/source/XYZ.js";
-import Image from "next/image";
 import mapboxOutdoors from "../../../assets/map/layers/mapbox-outdoors.png";
 import mapboxSatellite from "../../../assets/map/layers/mapbox-satellite.png";
 import mapboxSatelliteStreet from "../../../assets/map/layers/mapbox-satellite-streets.png";
@@ -63,25 +62,25 @@ const baseLayers = [
     id: "mapbox-outdoors",
     name: "户外地图",
     layer: outdoorsLayer,
-    img: mapboxOutdoors,
+    img: mapboxOutdoors.src,
   },
   {
     id: "mapbox-satellite",
     name: "卫星地图",
     layer: satelliteLayer,
-    img: mapboxSatellite,
+    img: mapboxSatellite.src,
   },
   {
     id: "mapbox-satellite-streets",
     name: "卫星街道地图",
     layer: satelliteStreetsLayer,
-    img: mapboxSatelliteStreet,
+    img: mapboxSatelliteStreet.src,
   },
   {
     id: "mapbox-streets",
     name: "街道地图",
     layer: streetsLayer,
-    img: mapboxStreets,
+    img: mapboxStreets.src,
   },
 ];
 
@@ -132,7 +131,7 @@ class MapLayerControl extends Control {
 const MapLayerControlContent: React.FC<{
   handleMapLayers: (id: string) => void;
 }> = ({ handleMapLayers }) => {
-  // 切换底图选项展开，控制显示和卸载
+  // 切换底图选项展开，控制显示和卸载+
   const [isShow, setShow] = useState(false);
   const [isExpanded, setExpanded] = useState(false);
   // 快速切换底图
@@ -170,7 +169,7 @@ const MapLayerControlContent: React.FC<{
       >
         <div className="w-20 h-20 p-1">
           <button onClick={() => handleQuickSwitch()}>
-            <Image
+            <img
               width={240}
               height={100}
               src={
@@ -210,12 +209,12 @@ const MapLayerControlContent: React.FC<{
               className="flex flex-auto flex-col  justify-center items-center text-gray-500 text-xs"
               onClick={() => handleMapLayers(item.id)}
             >
-              <Image
+              <img
                 width={240}
                 height={100}
                 src={item.img}
                 alt={item.name}
-                className="object-cover object-left w-16 h-16 rounded-md  hover:border-blue-500 border-2"
+                className="object-cover object-left w-16 h-16 rounded-md border-2 border-white hover:border-blue-500"
               />
               <span className="pt-1">{item.name}</span>
             </button>

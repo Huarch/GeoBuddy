@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import avatarSmall from "../../assets/avatar/avatar-small.jpeg";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
-import { Button, Icon, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import { useState } from "react";
 import clsx from "clsx";
@@ -28,14 +27,13 @@ export default function UserPanel() {
     >
       <div className=" absolute top-0 right-0">
         {!isExpanded ? (
-          <Image
+          <img
             onClick={toggleAvatar}
             width={48}
             height={48}
-            src={avatarSmall}
+            src={avatarSmall.src}
             className="rounded-full mx-auto"
             alt="Avatar"
-            priority
             draggable="false"
           />
         ) : (
@@ -51,13 +49,12 @@ export default function UserPanel() {
       </div>
       {isExpanded && (
         <div className="flex flex-col items-center mt-4 w-full">
-          <Image
+          <img
             width={64}
             height={64}
-            src={avatarSmall}
+            src={avatarSmall.src}
             className="rounded-full mx-auto"
             alt="Avatar"
-            priority
             draggable="false"
           />
           <div className="font-bold mt-2 select-none">你好👋</div>
@@ -73,8 +70,6 @@ export default function UserPanel() {
           </div>
         </div>
       )}
-      {/* <button className="bg-blue-400 text-white rounded px-4 py-2 mt-2">导入数据</button>
-      <button className="bg-blue-400 text-white rounded px-4 py-2 mt-2">导出数据</button> */}
     </div>
   );
 }

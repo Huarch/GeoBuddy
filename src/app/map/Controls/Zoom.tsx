@@ -75,7 +75,7 @@ const ZoomContent: React.FC<{
   // 包装 handleLocate，点击后禁用按钮一段时间
   const onLocateClick = () => {
     navigator.geolocation.getCurrentPosition(
-      (geolocation) => {
+      () => {
         handleLocate();
       },
       (error) => {

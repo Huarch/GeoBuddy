@@ -9,8 +9,8 @@ import React, {
 } from "react";
 import { Map as OlMap } from "ol";
 import View from "ol/View.js";
-import TileLayer from "ol/layer/Tile.js";
-import XYZ from "ol/source/XYZ.js";
+// import TileLayer from "ol/layer/Tile.js";
+// import XYZ from "ol/source/XYZ.js";
 import "ol/ol.css";
 import { fromLonLat } from "ol/proj";
 import MapTools from "./MapTools";
