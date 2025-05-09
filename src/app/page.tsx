@@ -7,7 +7,7 @@ import UserPanel from "./UserPanel/UserPanel";
 // import ChatWindow from "./Chat/ChatWindow";
 // import FooterBar from "./Footer/FooterBar";
 // import MapTools from "./Map/MapTools";
-import MapComponent from "./Map/MapComponent";
+import MapComponent from "./OlMap/MapComponent";
 // const MapComponent = dynamic(() => import("./Map/MapComponent"), {
 //   ssr: false,
 // });
